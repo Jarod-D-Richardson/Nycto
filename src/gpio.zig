@@ -314,3 +314,13 @@ pub const GPIO = extern struct {
         reserved: u15,
     }),
 };
+
+pub const AFIO = extern struct {
+    EVCR: Register(u32),
+    MAPR: Register(u32),
+    EXTICR1: Register(u32),
+    EXTICR2: Register(u32),
+    EXTICR3: Register(u32),
+    EXTICR4: Register(u32),
+    MAPR2: Register(u32),
+};

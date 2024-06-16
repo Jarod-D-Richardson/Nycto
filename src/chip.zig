@@ -36,19 +36,21 @@ pub fn Register(comptime T: type) type {
             }
             self.write(val);
         }
+
     };
 }
 
 pub const Chip = struct {
     pub const peripherals = struct {
         pub const RCC: *volatile rcc.RCC = @ptrFromInt(0x4002_1000);
-        pub const GPIOA: *volatile gpio.GPIO = @ptrFromInt(0x4001_0800);
-        pub const GPIOB: *volatile gpio.GPIO = @ptrFromInt(0x4001_0C00);
-        pub const GPIOC: *volatile gpio.GPIO = @ptrFromInt(0x4001_1000);
-        pub const GPIOD: *volatile gpio.GPIO = @ptrFromInt(0x4001_1400);
-        pub const GPIOE: *volatile gpio.GPIO = @ptrFromInt(0x4001_1800);
-        pub const GPIOF: *volatile gpio.GPIO = @ptrFromInt(0x4001_1C00);
         pub const GPIOG: *volatile gpio.GPIO = @ptrFromInt(0x4001_2000);
+        pub const GPIOF: *volatile gpio.GPIO = @ptrFromInt(0x4001_1C00);
+        pub const GPIOE: *volatile gpio.GPIO = @ptrFromInt(0x4001_1800);
+        pub const GPIOD: *volatile gpio.GPIO = @ptrFromInt(0x4001_1400);
+        pub const GPIOC: *volatile gpio.GPIO = @ptrFromInt(0x4001_1000);
+        pub const GPIOB: *volatile gpio.GPIO = @ptrFromInt(0x4001_0C00);
+        pub const GPIOA: *volatile gpio.GPIO = @ptrFromInt(0x4001_0800);
+        pub const AFIO: *volatile gpio.AFIO = @ptrFromInt(0x4001_0000);
     };
 };
 
